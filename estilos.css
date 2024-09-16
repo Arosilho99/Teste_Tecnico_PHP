@@ -1,0 +1,226 @@
+/* Estilos existentes para o tema escuro */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+        animation: fadeIn 1s ease-in-out;
+
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+h2 {
+    color: #e0e0e0;
+    text-align: center;
+        animation: slideDown 0.8s ease-in-out;
+
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+form {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        animation: popUp 0.6s ease-in-out;
+
+}
+@keyframes popUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+label {
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #e0e0e0;
+        transition: border 0.3s, background-color 0.3s;
+
+}
+
+.submit-container {
+    text-align: right;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 95%;
+    max-width: 100%;
+    margin: 20px 0;
+        animation: fadeInTable 0.8s ease-in-out;
+
+}
+@keyframes fadeInTable {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+table {
+    border: 1px solid #444;
+    border-collapse: separate;
+    border-radius: 8px;
+    background-color: #222;
+    width: 100%;
+    margin-bottom: 20px;
+    table-layout: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    overflow: hidden;
+    color: #ccc;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+tr:nth-child(odd) {
+    background-color: #222;
+}
+
+tr:hover {
+    background-color: #555;
+        transition: background-color 0.3s ease;
+
+}
+
+
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #eee;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #555;
+}
+
+/* Estilo para os botões de Editar e Excluir */
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+        transform: scale(1.05);
+
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+        transform: scale(1.05);
+
+}
+
+/* Estilo para o botão Editar que aparece ao clicar */
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #4CAF50; /* Igual ao botão de salvar */
+        transition: background-color 0.3s, transform 0.2s;
+
+}
+
+button:hover {
+    background-color: #45a049; /* Igual ao botão de salvar */
+        transform: scale(1.05);
+
+}
+

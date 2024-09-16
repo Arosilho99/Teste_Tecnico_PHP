@@ -1,0 +1,187 @@
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY,
+    nome_produto VARCHAR(100) NOT NULL,
+    descricao_produto TEXT,
+    valor_produto DECIMAL(10, 2) NOT NULL,
+    quantidade_estoque INT NOT NULL
+);
+
+CREATE TABLE candidatos (
+    id SERIAL PRIMARY KEY,
+    nome_completo VARCHAR(255) NOT NULL,
+    experiencia_php INTEGER,
+    formacao_academica INTEGER,
+    conhecimento_bd_postgresql INTEGER,
+    pontuacao_final INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS public.depara
+(
+    id integer NOT NULL DEFAULT nextval('depara_id_seq'::regclass),
+    categoria character varying(50) COLLATE pg_catalog."default",
+    descricao character varying(50) COLLATE pg_catalog."default",
+    valor_pontos integer,
+    CONSTRAINT depara_pkey PRIMARY KEY (id)
+)
+
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('experiencia_php', 'sn', 0);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('experiencia_php', '1_ano', 20);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('experiencia_php', '1_a_3_anos', 40);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('experiencia_php', '3_a_5_anos', 60);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('experiencia_php', 'mais_de_5', 100);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('formacao_academica', 'superior_em_ti', 25);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('formacao_academica', 'superior_em_outras_areas', 15);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('formacao_academica', 'sn', 0);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('conhecimento_bd_postgresql', 'postgresql', 25);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('conhecimento_bd_postgresql', 'outros', 15);
+INSERT INTO depara (categoria, descricao, valor_pontos) VALUES ('conhecimento_bd_postgresql', 'nenhum', 0);
+
+CREATE TABLE IF NOT EXISTS public.configuracoes
+(
+    id integer NOT NULL DEFAULT nextval('configuracoes_id_seq'::regclass),
+    senha_lista character varying(50) COLLATE pg_catalog."default",
+    CONSTRAINT configuracoes_pkey PRIMARY KEY (id)
+)
+
+insert into configuracoes(senha_lista) values ('123465')
+
+INSERT INTO produtos (nome_produto, descricao_produto, valor_produto, quantidade_estoque) 
+VALUES 
+('Suporte para Monitor', 'Descrição detalhada do Suporte para Monitor', 57.66, 32),
+('Docking Station', 'Descrição detalhada do Docking Station', 704.84, 78),
+('Capa para Notebook', 'Descrição detalhada do Capa para Notebook', 2631.20, 21),
+('Tablet', 'Descrição detalhada do Tablet', 1416.91, 12),
+('Pen Drive', 'Descrição detalhada do Pen Drive', 1028.96, 85),
+('Cadeira Gamer', 'Descrição detalhada do Cadeira Gamer', 2975.73, 76),
+('Cooler para Processador', 'Descrição detalhada do Cooler para Processador', 1469.43, 4),
+('Placa de Vídeo', 'Descrição detalhada do Placa de Vídeo', 1169.40, 54),
+('Cabo USB-C', 'Descrição detalhada do Cabo USB-C', 2327.30, 15),
+('Antena Wi-Fi', 'Descrição detalhada do Antena Wi-Fi', 1453.54, 97),
+('Microfone USB', 'Descrição detalhada do Microfone USB', 902.54, 50),
+('Laptop', 'Descrição detalhada do Laptop', 2078.56, 21),
+('Docking Station', 'Descrição detalhada do Docking Station', 1599.72, 20),
+('Memória RAM', 'Descrição detalhada do Memória RAM', 2907.27, 53),
+('Caixa de Som Bluetooth', 'Descrição detalhada do Caixa de Som Bluetooth', 732.61, 87),
+('Switch Ethernet', 'Descrição detalhada do Switch Ethernet', 840.11, 97),
+('Ventilador USB', 'Descrição detalhada do Ventilador USB', 832.83, 16),
+('Estabilizador', 'Descrição detalhada do Estabilizador', 847.59, 59),
+('Smartphone', 'Descrição detalhada do Smartphone', 1888.76, 49),
+('Switch Ethernet', 'Descrição detalhada do Switch Ethernet', 1580.46, 28),
+('Placa de Vídeo', 'Descrição detalhada do Placa de Vídeo', 1797.60, 93),
+('Carregador Portátil', 'Descrição detalhada do Carregador Portátil', 1914.09, 35),
+('Kit Ferramentas para PC', 'Descrição detalhada do Kit Ferramentas para PC', 2816.35, 88),
+('Gamepad', 'Descrição detalhada do Gamepad', 2648.72, 42),
+('Hub USB', 'Descrição detalhada do Hub USB', 424.79, 36),
+('Controle para PC', 'Descrição detalhada do Controle para PC', 1145.23, 14),
+('Ventilador USB', 'Descrição detalhada do Ventilador USB', 2367.94, 9),
+('Notebook Gamer', 'Descrição detalhada do Notebook Gamer', 2738.72, 20),
+('Estação de Carregamento', 'Descrição detalhada do Estação de Carregamento', 1030.26, 48),
+('Caixa de Som Bluetooth', 'Descrição detalhada do Caixa de Som Bluetooth', 2354.96, 78),
+('Mouse Gamer', 'Descrição detalhada do Mouse Gamer', 2443.25, 24),
+('Suporte para Notebook', 'Descrição detalhada do Suporte para Notebook', 2580.67, 32),
+('Gamepad', 'Descrição detalhada do Gamepad', 1713.27, 70),
+('Drone', 'Descrição detalhada do Drone', 2915.69, 12),
+('Estabilizador', 'Descrição detalhada do Estabilizador', 797.02, 15),
+('Controle para PC', 'Descrição detalhada do Controle para PC', 2931.76, 44),
+('Estação de Carregamento', 'Descrição detalhada do Estação de Carregamento', 1782.52, 29),
+('Mouse Gamer', 'Descrição detalhada do Mouse Gamer', 542.96, 37),
+('Capa para Notebook', 'Descrição detalhada do Capa para Notebook', 889.48, 42),
+('Impressora 3D', 'Descrição detalhada do Impressora 3D', 1801.13, 10),
+('Memória RAM', 'Descrição detalhada do Memória RAM', 1407.03, 83),
+('Pen Drive', 'Descrição detalhada do Pen Drive', 1139.20, 98),
+('Microfone USB', 'Descrição detalhada do Microfone USB', 1293.78, 58),
+('Câmera Digital', 'Descrição detalhada do Câmera Digital', 2249.65, 17),
+('Caixa de Som Bluetooth', 'Descrição detalhada do Caixa de Som Bluetooth', 2698.77, 23),
+('Notebook Gamer', 'Descrição detalhada do Notebook Gamer', 479.18, 1),
+('HDMI Splitter', 'Descrição detalhada do HDMI Splitter', 2332.58, 83),
+('Antena Wi-Fi', 'Descrição detalhada do Antena Wi-Fi', 2404.94, 24);
+
+-- Tabela de Advogados
+CREATE TABLE advogados (
+    id_advogado SERIAL PRIMARY KEY,
+    nome_advogado VARCHAR(100) NOT NULL
+);
+
+-- Tabela de Processos
+CREATE TABLE processos (
+    id_processo SERIAL PRIMARY KEY,
+    Numero_cnj VARCHAR(50) NOT NULL,
+    status_processo VARCHAR(50) NOT NULL,
+    id_advogado_responsavel INT REFERENCES advogados(id_advogado)
+);
+
+-- Tabela de Partes
+CREATE TABLE partes (
+    id_parte SERIAL PRIMARY KEY,
+    id_processo INT REFERENCES processos(id_processo),
+    nome_parte VARCHAR(100) NOT NULL,
+    tipo_parte VARCHAR(50) NOT NULL
+);
+
+-- Tabela de Agendamentos
+CREATE TABLE agendamentos (
+    id_agendamento SERIAL PRIMARY KEY,
+    id_processo INT REFERENCES processos(id_processo),
+    data_agendamento DATE NOT NULL,
+    tipo_agendamento VARCHAR(50) NOT NULL,
+    status_agendamento VARCHAR(50) NOT NULL
+);
+
+
+
+-- Tabela de Diligências
+CREATE TABLE diligencias (
+    id_diligencia SERIAL PRIMARY KEY,
+    id_agendamento INT REFERENCES agendamentos(id_agendamento),
+    detalhes_diligencia TEXT
+);
+
+-- Inserir Advogados
+INSERT INTO advogados (nome_advogado) VALUES ('João Silva');
+INSERT INTO advogados (nome_advogado) VALUES ('Maria Oliveira');
+
+-- Inserir Processos
+INSERT INTO processos (Numero_cnj, status_processo, id_advogado_responsavel) VALUES ('0001-01.2024.8.01.0001', 'Ativo', 1);
+INSERT INTO processos (Numero_cnj, status_processo, id_advogado_responsavel) VALUES ('0002-02.2024.8.01.0002', 'Arquivado', 2);
+
+-- Inserir Partes
+INSERT INTO partes (id_processo, nome_parte, tipo_parte) VALUES (1, 'Carlos Pereira', 'Autor');
+INSERT INTO partes (id_processo, nome_parte, tipo_parte) VALUES (1, 'Ana Costa', 'Réu');
+INSERT INTO partes (id_processo, nome_parte, tipo_parte) VALUES (2, 'Lucas Santos', 'Réu');
+
+-- Inserir Agendamentos
+INSERT INTO agendamentos (id_processo, data_agendamento, tipo_agendamento, status_agendamento) VALUES (1, '2024-09-20', 'Audiência', 'Marcado');
+INSERT INTO agendamentos (id_processo, data_agendamento, tipo_agendamento, status_agendamento) VALUES (1, '2024-09-25', 'Diligência', 'Marcado');
+INSERT INTO agendamentos (id_processo, data_agendamento, tipo_agendamento, status_agendamento) VALUES (2, '2024-10-05', 'Audiência', 'Realizado');
+
+-- Inserir Diligências
+INSERT INTO diligencias (id_agendamento, detalhes_diligencia) VALUES (2, 'Diligência para coleta de provas.');
+
+
+CREATE VIEW relatorio_agendamentos AS
+SELECT 
+    p.Numero_cnj AS "Número do Processo",
+    a.nome_advogado AS "Nome do Advogado Responsável",
+    pt.nome_parte AS "Nome da Parte",
+    pt.tipo_parte AS "Tipo de Parte",
+    ag.data_agendamento AS "Data do Agendamento",
+    ag.tipo_agendamento AS "Tipo de Agendamento",
+    ag.status_agendamento AS "Status do Agendamento",
+    d.detalhes_diligencia AS "Detalhes da Diligência"
+FROM 
+    processos p
+JOIN 
+    advogados a ON p.id_advogado_responsavel = a.id_advogado
+JOIN 
+    partes pt ON p.id_processo = pt.id_processo
+JOIN 
+    agendamentos ag ON p.id_processo = ag.id_processo
+LEFT JOIN 
+    diligencias d ON ag.id_agendamento = d.id_agendamento;
+
+
+select * from relatorio_agendamentos;
+
+
+
+

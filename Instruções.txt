@@ -1,0 +1,4 @@
+os 3 projetos estão juntos, no index vai ter um menu pra escolher qual abrir 
+
+1 - Após rodar o "Banco de dados" para criar e popular todas as tabelas basta abrir o projeto
+2 -  a senha para acesso a tabela do projeto de RH esta na tabela configurações (senha padrão 123456)
